@@ -19,8 +19,13 @@ void setup() {
 
 void loop() {
   const char data[11] = "";
-  radio.read(&data, sizeof(data));
-  Serial.print("DATA RECEIVED: ");
-  Serial.println(data);
-  delay(1000);
+  
+  if(radio.available()) {
+    radio.read((void*)&data, sizeof(data));
+    //radio.read(&data, sizeof(data));
+  
+    Serial.print("DATA RECEIVED: ");
+    Serial.println(data);  
+  }
+  delay(50);
 }

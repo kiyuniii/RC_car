@@ -47,10 +47,5 @@ void loop() {
   } else {
     Serial.println("      MESSAGE FAILED!");
   }
-  delay(1000);
-  // const char text[] = "HELLO, KIYUN!";
-  // Serial.print("DATA TRANSMITTED: ");
-  // Serial.println(text);
-  // radio.write(&text, sizeof(text));
-  // delay(1000);
+  delay(50);
 }
